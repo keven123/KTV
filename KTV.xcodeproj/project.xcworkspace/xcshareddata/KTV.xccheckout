@@ -14,22 +14,26 @@
 		<string>https://github.com/ccgus/fmdb.git</string>
 		<key>159A69E69085174A7C80113FBA980A94565AD2BD</key>
 		<string>https://github.com/hushifei/KTV_601_night.git</string>
+		<key>5FBA02D9AE206CAB54D9F2E87F847A6918CA755B</key>
+		<string>https://github.com/hushifei/KTV.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>KTV.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>04101981B66E318109934C9516F88D824BB96459</key>
-		<string>../..KTV/Funcions/fmdb/</string>
+		<string>../../../KTV_601_nightKTV/Funcions/fmdb</string>
 		<key>159A69E69085174A7C80113FBA980A94565AD2BD</key>
+		<string>../../../KTV_601_night</string>
+		<key>5FBA02D9AE206CAB54D9F2E87F847A6918CA755B</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/hushifei/KTV_601_night.git</string>
+	<string>https://github.com/hushifei/KTV.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>159A69E69085174A7C80113FBA980A94565AD2BD</string>
+	<string>5FBA02D9AE206CAB54D9F2E87F847A6918CA755B</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -39,6 +43,14 @@
 			<string>04101981B66E318109934C9516F88D824BB96459</string>
 			<key>IDESourceControlWCCName</key>
 			<string>fmdb</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>5FBA02D9AE206CAB54D9F2E87F847A6918CA755B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>KTV</string>
 		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
