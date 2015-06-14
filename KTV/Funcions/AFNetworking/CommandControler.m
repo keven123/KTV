@@ -153,18 +153,21 @@
 }
 //暂停/播放
 - (void)sendCmd_stopPlay:(BOOL)value {
+    int a=value?1:2;
     //    http://192.168.43.1:8080/puze?cmd=0xba&ID=(1暂停 2 播放)
-    NSString *urlStr=[[COMMANDURLHEADER stringByAppendingFormat:@"0xba&ID=%d",value]stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSString *urlStr=[[COMMANDURLHEADER stringByAppendingFormat:@"0xba&ID=%d",a]stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     NSURLRequest *request=[NSURLRequest requestWithURL:[NSURL URLWithString:urlStr]];
     
     [NSURLConnection sendAsynchronousRequest:request queue:queue completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
     }];
 }
 //原唱/伴唱
-- (void)sendCmd_yuanChang_pangChang:(int)value {
+- (void)sendCmd_yuanChang_pangChang:(BOOL)value {
     
     //http://192.168.43.1:8080/puze?cmd=0xbb&ID=(1原唱2伴唱)
-    NSString *urlStr=[[COMMANDURLHEADER stringByAppendingFormat:@"0xbb&ID=%d",value]stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    int a=value?1:2;
+
+    NSString *urlStr=[[COMMANDURLHEADER stringByAppendingFormat:@"0xbb&ID=%d",a]stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     NSURLRequest *request=[NSURLRequest requestWithURL:[NSURL URLWithString:urlStr]];
     
     [NSURLConnection sendAsynchronousRequest:request queue:queue completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {

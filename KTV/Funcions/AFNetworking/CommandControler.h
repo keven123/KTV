@@ -40,7 +40,7 @@
 //暂停/播放
 - (void)sendCmd_stopPlay:(BOOL)value;
 //原唱/伴唱
-- (void)sendCmd_yuanChang_pangChang:(int)value;
+- (void)sendCmd_yuanChang_pangChang:(BOOL)value;
 //获取已点歌单
 - (void)sendCmd_get_yiDianList;
 //删除已点
