@@ -22,9 +22,9 @@
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>04101981B66E318109934C9516F88D824BB96459</key>
-		<string>../../../KTV_601_nightKTV/Funcions/fmdb</string>
+		<string>../.._601_nightKTV/Funcions/fmdb</string>
 		<key>159A69E69085174A7C80113FBA980A94565AD2BD</key>
-		<string>../../../KTV_601_night</string>
+		<string>../.._601_night</string>
 		<key>5FBA02D9AE206CAB54D9F2E87F847A6918CA755B</key>
 		<string>../..</string>
 	</dict>
