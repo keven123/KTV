@@ -18,6 +18,9 @@
 #import "SettingViewController.h"
 #import "SoundViewController.h"
 #import "MBProgressHUD.h"
+#import "UIImageView+WebCache.h"
+#define SINGER_PIC_URL @"http://192.168.43.1:8080/puze?cmd=0x02&filename="
+
 @interface SingersViewController () {
     NSArray *dataList;
 }
@@ -102,13 +105,19 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     SingerAreaTypeCell *cell = [tableView dequeueReusableCellWithIdentifier:CELLIDENTIFY forIndexPath:indexPath];
-    [cell.headImageV setImage:[UIImage imageNamed:@"kge_head"]];
     Singer *oneSinger=dataList[indexPath.row];
     cell.SingerLabel.text=oneSinger.singer;
     cell.SingerLabel.textColor=[UIColor groupTableViewBackgroundColor];
     cell.SingerLabel.font=[UIFont systemFontOfSize:14];
     cell.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"geshou_area_cell_bg"]];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
+//    NSString *urlStr=[[SINGER_PIC_URL stringByAppendingString:oneSinger.singer]stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+//        [cell.headImageV sd_setImageWithURL:[NSURL URLWithString:urlStr] placeholderImage:[UIImage imageNamed:@"kge_head"] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+//            
+//        }];
+    NSString *urlStr=@"http://192.168.43.1:8080/puze?cmd=0x02&filename=刘德华.png";
+    urlStr =[urlStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    [cell.headImageV sd_setImageWithURL:[NSURL URLWithString:urlStr]   placeholderImage:[UIImage imageNamed:@"kge_head"]];
     return cell;
 }
 

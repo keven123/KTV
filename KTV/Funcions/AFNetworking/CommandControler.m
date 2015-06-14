@@ -7,6 +7,7 @@
 //
 
 #import "CommandControler.h"
+
 @interface CommandControler() {
     NSOperationQueue *queue;
     NSArray *downLoadFiles;
@@ -64,7 +65,7 @@
 }
 
 - (void)startDownLoadPictureWithSinger:(NSString*)singer {
-    
+
 }
 
 

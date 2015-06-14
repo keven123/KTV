@@ -5,7 +5,6 @@
 //  Created by stevenhu on 15/4/19.
 //  Copyright (c) 2015年 stevenhu. All rights reserved.
 //
-
 #import "SingerAreaViewController.h"
 #import "SingerAreaTypeCell.h"
 #define CELLIDENTIFY @"SingerAreaTypeCell"
@@ -114,9 +113,9 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     SingerAreaTypeCell *cell = [tableView dequeueReusableCellWithIdentifier:CELLIDENTIFY forIndexPath:indexPath];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    [cell.headImageV setImage:[UIImage imageNamed:@"kge_head"]];
     Typelist *onetype=dataList[indexPath.row];
     cell.SingerLabel.text=onetype.zztypename;
+    [cell.headImageV setImage:[UIImage imageNamed:@"kge_head"]];
     cell.SingerLabel.textColor=[UIColor groupTableViewBackgroundColor];
     cell.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"geshou_area_cell_bg"]];
     return cell;
