@@ -82,7 +82,7 @@
     //    navC3.title = @"声控";
     //    navC4.title = @"设置";
     
-    //kfq
+    //kfq 0071
     navC1.title = @"k歌";
     navC3.title = @"播音";
     navC4.title = @"设置";
