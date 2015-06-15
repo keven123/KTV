@@ -29,27 +29,27 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-//    _rootNavC=[[UINavigationController alloc]initWithRootViewController:_window.rootViewController];
-//    UIBarButtonItem *backItem=[[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemPageCurl target:nil action:nil];
-//    [_rootNavC.navigationItem setBackBarButtonItem:backItem];
-//    UIImage *image=[[UIImage imageNamed:@"new_nav_bg"]stretchableImageWithLeftCapWidth:10 topCapHeight:30];
-//    [_rootNavC.navigationBar setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
-//    [_rootNavC.toolbar setBackgroundImage:image forToolbarPosition:UIBarPositionAny barMetrics:UIBarMetricsDefault];
-//    NSDictionary * navBarTitleTextAttributes =@{ NSForegroundColorAttributeName : [UIColor whiteColor]};
-//    [[UINavigationBar appearance] setTitleTextAttributes:navBarTitleTextAttributes];
-//    [[UINavigationBar appearance]setTintColor:[UIColor whiteColor]];
-//    [[UIApplication sharedApplication] setStatusBarStyle: UIStatusBarStyleLightContent];
-//    [[UIBarButtonItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
-//                                                       [UIColor whiteColor], NSForegroundColorAttributeName,
-//                                                       nil] forState:UIControlStateNormal];
-//    UIColor *titleHighlightedColor = [UIColor greenColor];
-//    [[UIBarButtonItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
-//                                                       titleHighlightedColor, NSForegroundColorAttributeName,
-//                                                       nil] forState:UIControlStateSelected];
-//    self.window.rootViewController=_rootNavC;
+    //    _rootNavC=[[UINavigationController alloc]initWithRootViewController:_window.rootViewController];
+    //    UIBarButtonItem *backItem=[[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemPageCurl target:nil action:nil];
+    //    [_rootNavC.navigationItem setBackBarButtonItem:backItem];
+    //    UIImage *image=[[UIImage imageNamed:@"new_nav_bg"]stretchableImageWithLeftCapWidth:10 topCapHeight:30];
+    //    [_rootNavC.navigationBar setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
+    //    [_rootNavC.toolbar setBackgroundImage:image forToolbarPosition:UIBarPositionAny barMetrics:UIBarMetricsDefault];
+    //    NSDictionary * navBarTitleTextAttributes =@{ NSForegroundColorAttributeName : [UIColor whiteColor]};
+    //    [[UINavigationBar appearance] setTitleTextAttributes:navBarTitleTextAttributes];
+    //    [[UINavigationBar appearance]setTintColor:[UIColor whiteColor]];
+    //    [[UIApplication sharedApplication] setStatusBarStyle: UIStatusBarStyleLightContent];
+    //    [[UIBarButtonItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+    //                                                       [UIColor whiteColor], NSForegroundColorAttributeName,
+    //                                                       nil] forState:UIControlStateNormal];
+    //    UIColor *titleHighlightedColor = [UIColor greenColor];
+    //    [[UIBarButtonItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+    //                                                       titleHighlightedColor, NSForegroundColorAttributeName,
+    //                                                       nil] forState:UIControlStateSelected];
+    //    self.window.rootViewController=_rootNavC;
     [self downLoadFiles];
-//    operation = [[DownLoadOperation alloc] init];
-//    [operation sendCmd];
+    //    operation = [[DownLoadOperation alloc] init];
+    //    [operation sendCmd];
     UITabBarController *tabVC=[[UITabBarController alloc]init];
     tabVC.delegate=self;
     
@@ -60,27 +60,34 @@
     NSDictionary * navBarTitleTextAttributes =@{ NSForegroundColorAttributeName : [UIColor whiteColor]};
     [[UINavigationBar appearance] setTitleTextAttributes:navBarTitleTextAttributes];
     [[UINavigationBar appearance]setTintColor:[UIColor whiteColor]];
-
+    
     UINavigationController *navC1=[[UINavigationController alloc]initWithRootViewController:[[MainViewController alloc]init]];
-//      UINavigationController *navC1=[[UINavigationController alloc]initWithRootViewController:[[NmainViewController alloc]init]];
+    //      UINavigationController *navC1=[[UINavigationController alloc]initWithRootViewController:[[NmainViewController alloc]init]];
     
     [navC1.navigationBar setBackgroundImage:imagetop forBarMetrics:UIBarMetricsDefault];
     
-    UINavigationController *navC2=[[UINavigationController alloc]initWithRootViewController:[[UIViewController alloc]init]];
-    [navC2.navigationBar setBackgroundImage:imagetop forBarMetrics:UIBarMetricsDefault];
+    //    UINavigationController *navC2=[[UINavigationController alloc]initWithRootViewController:[[UIViewController alloc]init]];
+    //    [navC2.navigationBar setBackgroundImage:imagetop forBarMetrics:UIBarMetricsDefault];
     
     UINavigationController *navC3=[[UINavigationController alloc]initWithRootViewController:[[SoundViewController alloc]init]];
     [navC3.navigationBar setBackgroundImage:imagetop forBarMetrics:UIBarMetricsDefault];
     UINavigationController *navC4=[[UINavigationController alloc]initWithRootViewController:[[SettingViewController alloc]init]];
     [navC4.navigationBar setBackgroundImage:imagetop forBarMetrics:UIBarMetricsDefault];
-    tabVC.viewControllers=@[navC1,navC2,navC3,navC4];
+    //    tabVC.viewControllers=@[navC1,navC2,navC3,navC4];
+    tabVC.viewControllers=@[navC1,navC3,navC4];
     //设置标题
     
+    //    navC1.title = @"k歌";
+    //    navC2.title = @"播控";
+    //    navC3.title = @"声控";
+    //    navC4.title = @"设置";
+    
+    //kfq
     navC1.title = @"k歌";
-    navC2.title = @"播控";
-    navC3.title = @"声控";
+    navC3.title = @"播音";
     navC4.title = @"设置";
-//
+    
+    //
     [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
                                                        [UIColor whiteColor], NSForegroundColorAttributeName,
                                                        nil] forState:UIControlStateNormal];
@@ -94,8 +101,8 @@
     navC1.tabBarItem.selectedImage=[[UIImage imageNamed:@"kege_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
     
-    navC2.tabBarItem.image = [[UIImage imageNamed:@"bokong"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-     navC2.tabBarItem.selectedImage = [[UIImage imageNamed:@"bokong_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    //    navC2.tabBarItem.image = [[UIImage imageNamed:@"bokong"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    //     navC2.tabBarItem.selectedImage = [[UIImage imageNamed:@"bokong_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
     
     navC3.tabBarItem.image = [[UIImage imageNamed:@"shenkong"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
@@ -111,14 +118,26 @@
 }
 
 -(void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
+//    if (tabBarController.selectedIndex==1) {
+//        tabBarController.selectedIndex=currentItem;
+//        BokongView *view= [BokongView instanceShare];
+//        view.delegate=self;
+//        [view showAtView:nil];
+//    } else {
+//        currentItem=(int)tabBarController.selectedIndex;
+//    }
+    
     if (tabBarController.selectedIndex==1) {
-        tabBarController.selectedIndex=currentItem;
+        //        tabBarController.selectedIndex=currentItem;
         BokongView *view= [BokongView instanceShare];
         view.delegate=self;
         [view showAtView:nil];
     } else {
         currentItem=(int)tabBarController.selectedIndex;
     }
+    
+    //kfq
+    currentItem=(int)tabBarController.selectedIndex;
 }
 
 - (void)boKongHadDimssed {
